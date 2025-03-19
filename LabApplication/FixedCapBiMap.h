@@ -1,6 +1,8 @@
 #pragma once
 #include <utility>
+#include <exception>
 //DO NOT INCLUDE MAPITERATOR
+using namespace std;
 
 
 //DO NOT CHANGE THIS PART
@@ -14,8 +16,8 @@ class FixedCapBiMapIterator;
 
 
 //This is the interface of a Fixed Capacity Bi-Map container
-//Bi-Map means that it contains key-value pairs. One key can have at most two associated values (so there can be at most two pairs with the same key. 
-//It can happen that we have exactly the same key-value pair twice). 
+//Bi-Map means that it contains key-value pairs. One key can have at most two associated values (so there can be at most two pairs with the same key.
+//It can happen that we have exactly the same key-value pair twice).
 //Fixed capacity means that the container has a fixed capacity, provided when it is created. Once the total number of elements is equal to that fixed capacity, no other elements can be added.
 class FixedCapBiMap {
 
@@ -24,10 +26,13 @@ class FixedCapBiMap {
 
 	private:
 		//TODO - Representation
+		TElem* elements;
+		int capacity;
+		int mapSize;
 
 	public:
 
-	//constructor of the container. Creates a FixedCapBiMap with the given capacity. 
+	//constructor of the container. Creates a FixedCapBiMap with the given capacity.
 	//If capacity is zero or negative an exception is thrown
 	FixedCapBiMap(int capacity);
 
@@ -38,13 +43,13 @@ class FixedCapBiMap {
 	bool add(TKey c, TValue v);
 
 	//searches for a key in the FixedCapBiMap.
-	//It returns a pair of values. 
+	//It returns a pair of values.
 	//If c is not in the FixedCapBiMap, both elements of the pair have the value NULL_TVALUE.
 	//If c is in the FixedCapBiMap once, the first component of the pair is its value, the second component is NULL_TVALUE.
 	//If c is in the FixedCapBiMap twice, the returned pair contains the two values associated to it (in any order)
 	ValuePair search(TKey c) const;
 
-	//removes a key - value pair from the FixedCapBiMap 
+	//removes a key - value pair from the FixedCapBiMap
 	//if the pair was removed, the operation returns true, otherwise (if the given pair was not in the FixedCapBiMap) it returns false
 	bool remove(TKey c, TValue v);
 
@@ -64,6 +69,3 @@ class FixedCapBiMap {
 	~FixedCapBiMap();
 
 };
-
-
-

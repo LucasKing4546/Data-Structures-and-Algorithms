@@ -9,12 +9,10 @@ using namespace std;
 
 
 int main() {
-//	testAll();
-//	testAllExtended();
+	testAll();
+	testAllExtended();
 
 	cout << "That's all!" << endl;
 	system("pause");
 	return 0;
 }
-
-
