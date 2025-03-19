@@ -55,6 +55,30 @@ build CMakeFiles/LabApplication.dir/App.cpp.obj: CXX_COMPILER__LabApplication_un
   OBJECT_DIR = CMakeFiles\LabApplication.dir
   OBJECT_FILE_DIR = CMakeFiles\LabApplication.dir
 
+build CMakeFiles/LabApplication.dir/ExtendedTest.cpp.obj: CXX_COMPILER__LabApplication_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/LabApplication/ExtendedTest.cpp || cmake_object_order_depends_target_LabApplication
+  DEP_FILE = CMakeFiles\LabApplication.dir\ExtendedTest.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LabApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles\LabApplication.dir
+
+build CMakeFiles/LabApplication.dir/FixedCapBiMap.cpp.obj: CXX_COMPILER__LabApplication_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/LabApplication/FixedCapBiMap.cpp || cmake_object_order_depends_target_LabApplication
+  DEP_FILE = CMakeFiles\LabApplication.dir\FixedCapBiMap.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LabApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles\LabApplication.dir
+
+build CMakeFiles/LabApplication.dir/FixedCapBiMapIterator.cpp.obj: CXX_COMPILER__LabApplication_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/LabApplication/FixedCapBiMapIterator.cpp || cmake_object_order_depends_target_LabApplication
+  DEP_FILE = CMakeFiles\LabApplication.dir\FixedCapBiMapIterator.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LabApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles\LabApplication.dir
+
+build CMakeFiles/LabApplication.dir/ShortTest.cpp.obj: CXX_COMPILER__LabApplication_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/LabApplication/ShortTest.cpp || cmake_object_order_depends_target_LabApplication
+  DEP_FILE = CMakeFiles\LabApplication.dir\ShortTest.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LabApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles\LabApplication.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target LabApplication
@@ -63,7 +87,7 @@ build CMakeFiles/LabApplication.dir/App.cpp.obj: CXX_COMPILER__LabApplication_un
 #############################################
 # Link the executable LabApplication.exe
 
-build LabApplication.exe: CXX_EXECUTABLE_LINKER__LabApplication_Debug CMakeFiles/LabApplication.dir/App.cpp.obj
+build LabApplication.exe: CXX_EXECUTABLE_LINKER__LabApplication_Debug CMakeFiles/LabApplication.dir/App.cpp.obj CMakeFiles/LabApplication.dir/ExtendedTest.cpp.obj CMakeFiles/LabApplication.dir/FixedCapBiMap.cpp.obj CMakeFiles/LabApplication.dir/FixedCapBiMapIterator.cpp.obj CMakeFiles/LabApplication.dir/ShortTest.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\LabApplication.dir

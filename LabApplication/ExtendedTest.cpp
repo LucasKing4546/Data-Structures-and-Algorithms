@@ -240,10 +240,14 @@ void testIterator() {
 		count++;
 	}
 	assert(count == 50);
-
+	it4.previous();
+	while (it4.valid()) {
+		TElem e = it4.getCurrent();
+		assert(e.first % 4 == 0);
+		it4.previous();
+		count--;
+	}
 }
-
-
 
 void testQuantity() {
 	FixedCapBiMap m(61000);

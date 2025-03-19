@@ -13,6 +13,7 @@ private:
 public:
 	void first();
 	void next();
+    void previous();
 	TElem getCurrent();
 	bool valid() const;
 };

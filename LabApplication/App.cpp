@@ -8,7 +8,7 @@
 using namespace std;
 
 
-int main() {
+auto main() -> int {
 	testAll();
 	testAllExtended();
 

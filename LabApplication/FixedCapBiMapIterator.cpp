@@ -6,7 +6,6 @@ using namespace std;
 
 FixedCapBiMapIterator::FixedCapBiMapIterator(const FixedCapBiMap& d) : map(d)
 {
-	//TODO - Implementation
 	this->currentPosition = 0;
 }
 //BC: Theta(1), WC: Theta(1), TC: Theta(1)
@@ -14,7 +13,6 @@ FixedCapBiMapIterator::FixedCapBiMapIterator(const FixedCapBiMap& d) : map(d)
 
 
 void FixedCapBiMapIterator::first() {
-	//TODO - Implementation
 	this->currentPosition = 0;
 }
 //BC: Theta(1), WC: Theta(1), TC: Theta(1)
@@ -22,7 +20,6 @@ void FixedCapBiMapIterator::first() {
 
 
 void FixedCapBiMapIterator::next() {
-	//TODO - Implementation
 	if (this->currentPosition == this->map.mapSize) {
 		throw exception();
 	}
@@ -30,10 +27,14 @@ void FixedCapBiMapIterator::next() {
 }
 //BC: Theta(1), WC: Theta(1), TC: Theta(1)
 
-
+void FixedCapBiMapIterator::previous() {
+    if (this->currentPosition == 0) {
+		throw exception();
+    }
+    this->currentPosition--;
+}
 
 TElem FixedCapBiMapIterator::getCurrent(){
-	//TODO - Implementation
 	if (this->currentPosition == this->map.mapSize) {
 		throw exception();
 	}
@@ -44,7 +45,6 @@ TElem FixedCapBiMapIterator::getCurrent(){
 
 
 bool FixedCapBiMapIterator::valid() const {
-	//TODO - Implementation
 	return this->currentPosition < this->map.mapSize;
 }
 //BC: Theta(1), WC: Theta(1), TC: Theta(1)

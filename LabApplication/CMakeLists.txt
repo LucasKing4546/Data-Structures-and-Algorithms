@@ -3,4 +3,10 @@ project(LabApplication)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(LabApplication App.cpp)
+add_executable(LabApplication
+        App.cpp
+        ExtendedTest.cpp
+        FixedCapBiMap.cpp
+        FixedCapBiMapIterator.cpp
+        ShortTest.cpp
+)
