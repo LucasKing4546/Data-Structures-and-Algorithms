@@ -1,0 +1,3 @@
+C:/Git/Data-Structures-and-Algorithms/LabApplication/cmake-build-debug/CMakeFiles/LabApplication.dir
+C:/Git/Data-Structures-and-Algorithms/LabApplication/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Git/Data-Structures-and-Algorithms/LabApplication/cmake-build-debug/CMakeFiles/rebuild_cache.dir
