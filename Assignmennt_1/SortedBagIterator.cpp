@@ -1,28 +1,43 @@
 #include "SortedBagIterator.h"
 #include "SortedBag.h"
 #include <exception>
+#include <stdexcept>
+#include <iostream>
 
 using namespace std;
 
 SortedBagIterator::SortedBagIterator(const SortedBag& b) : bag(b) {
-	//TODO - Implementation
+	// Theta(1)
+	currentPosition = 0;
 }
 
 TComp SortedBagIterator::getCurrent() {
-	//TODO - Implementation
-	return NULL_TCOMP;
+	// Theta(1)
+	if (currentPosition >= bag.size()) {
+		throw out_of_range("No more elements in the bag");
+	}
+	return bag.elements[currentPosition];
 }
 
 bool SortedBagIterator::valid() {
-	//TODO - Implementation
+	// Theta(1)
+	if (currentPosition < bag.size()) {
+		return true;
+	}
 	return false;
 }
 
 void SortedBagIterator::next() {
-	//TODO - Implementation
+	// Theta(1)
+	if (currentPosition >= bag.size()) {
+		throw out_of_range("No more elements in the bag");	}
+	else {
+		currentPosition++;
+	}
 }
 
 void SortedBagIterator::first() {
-	//TODO - Implementation
+	// Theta(1)
+	currentPosition = 0;
 }
 

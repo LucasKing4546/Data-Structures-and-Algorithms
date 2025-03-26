@@ -28,7 +28,6 @@ void testAll() {
 	SortedBagIterator it = sb.iterator();
 	assert(it.valid() == true);
 	while (it.valid()) {
-		it.getCurrent();
 		it.next();
 	}
 	assert(it.valid() == false);

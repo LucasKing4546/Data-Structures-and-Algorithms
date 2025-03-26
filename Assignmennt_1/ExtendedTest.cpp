@@ -25,12 +25,15 @@ void testCreate() {
 	for (int i = -10; i < 30; i++) {
 		assert(sb.remove(i) == false);
 	}
+
 	for (int i = -10; i < 30; i++) {
 		assert(sb.search(i) == false);
 	}
+
 	for (int i = -10; i < 30; i++) {
 		assert(sb.nrOccurrences(i) == 0);
 	}
+
 	SortedBagIterator it = sb.iterator();
 	assert(it.valid() == false);
 	try {
@@ -90,6 +93,7 @@ void testIterator(SortedBag& sb, Relation rel) {
 			count++;
 			it.next();
 		}
+
 		assert(count == sb.size());
 	}
 }
@@ -98,7 +102,6 @@ void testAdd(Relation r) {
 	cout << "Test add" << endl;
 	SortedBag sb(r);
 	for (int i = 0; i < 100; i++) {
-				
 		sb.add(i);
 	}
 	assert(sb.size() == 100);
@@ -209,7 +212,7 @@ void testRemove(Relation r) {
 		}
 		testIterator(sb, r);
 	}
-	
+
 	SortedBag sb2(r);
 	for (int i = 300; i >= -500; i--) {
 		sb2.add(i);
@@ -292,8 +295,6 @@ void testIterator(Relation rel) {
 	}
 	assert(count == sb.size());
 }
-
-
 
 void testAllExtended() {
 	testCreate();

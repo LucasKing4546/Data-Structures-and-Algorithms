@@ -10,9 +10,7 @@ class SortedBagIterator
 private:
 	const SortedBag& bag;
 	SortedBagIterator(const SortedBag& b);
-
-	//TODO - Representation
-
+	unsigned int currentPosition;
 public:
 	TComp getCurrent();
 	bool valid();
