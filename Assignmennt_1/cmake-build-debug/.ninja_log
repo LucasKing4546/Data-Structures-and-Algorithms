@@ -1,0 +1,17 @@
+# ninja log v6
+29	665	7646905334584309	CMakeFiles/Assignmennt_1.dir/SortedBag.cpp.obj	e78d7bb8951673c7
+65	834	7646893387872275	CMakeFiles/Assignmennt_1.dir/ShortTest.cpp.obj	90d130f955d50b4
+36	653	7646905334646939	CMakeFiles/Assignmennt_1.dir/SortedBagIterator.cpp.obj	e823cd1752759b8f
+49	824	7646893387712280	CMakeFiles/Assignmennt_1.dir/App.cpp.obj	474f9cacadf3b9cc
+58	865	7646893387802116	CMakeFiles/Assignmennt_1.dir/ExtendedTest.cpp.obj	cfebf4debbacf86d
+665	795	7646905340943979	Assignmennt_1.exe	39df40a795449c62
+61	743	7646908547675555	CMakeFiles/Assignmennt_1.dir/SortedBag.cpp.obj	e78d7bb8951673c7
+744	906	7646908554501038	Assignmennt_1.exe	39df40a795449c62
+37	718	7646910847922064	CMakeFiles/Assignmennt_1.dir/SortedBag.cpp.obj	e78d7bb8951673c7
+719	895	7646910854744960	Assignmennt_1.exe	39df40a795449c62
+55	759	7646911508437155	CMakeFiles/Assignmennt_1.dir/SortedBag.cpp.obj	e78d7bb8951673c7
+760	923	7646911515480363	Assignmennt_1.exe	39df40a795449c62
+45	763	7646911745861405	CMakeFiles/Assignmennt_1.dir/SortedBag.cpp.obj	e78d7bb8951673c7
+764	955	7646911753038468	Assignmennt_1.exe	39df40a795449c62
+54	746	7646916520952943	CMakeFiles/Assignmennt_1.dir/SortedBag.cpp.obj	e78d7bb8951673c7
+747	904	7646916527884293	Assignmennt_1.exe	39df40a795449c62
