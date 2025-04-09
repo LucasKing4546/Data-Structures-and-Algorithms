@@ -6,29 +6,53 @@
 
 using namespace std;
 
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 SortedBagIterator::SortedBagIterator(const SortedBag& b) : bag(b) {
-	// Theta(1)
 	currentPosition = 0;
 }
 
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 TComp SortedBagIterator::getCurrent() {
-	// Theta(1)
 	if (currentPosition >= bag.size()) {
 		throw out_of_range("No more elements in the bag");
 	}
 	return bag.elements[currentPosition];
 }
 
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 bool SortedBagIterator::valid() {
-	// Theta(1)
-	if (currentPosition < bag.size()) {
+	if (currentPosition < bag.size() && currentPosition >= 0) {
 		return true;
 	}
 	return false;
 }
 
+// Best-case: Theta(1)
+// Worst-case: Theta(k)
+// Total: O(k)
+void SortedBagIterator::back(int k) {
+	if (k < 1) {
+		throw std::invalid_argument("k must be greater than zero");
+	}
+	while (k) {
+		if (currentPosition < 0) {
+			throw out_of_range("No more elements in the bag");
+		}
+		currentPosition--;
+		k--;
+	}
+}
+
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 void SortedBagIterator::next() {
-	// Theta(1)
 	if (currentPosition >= bag.size()) {
 		throw out_of_range("No more elements in the bag");	}
 	else {
@@ -36,8 +60,10 @@ void SortedBagIterator::next() {
 	}
 }
 
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 void SortedBagIterator::first() {
-	// Theta(1)
 	currentPosition = 0;
 }
 

@@ -10,11 +10,12 @@ class SortedBagIterator
 private:
 	const SortedBag& bag;
 	SortedBagIterator(const SortedBag& b);
-	unsigned int currentPosition;
+	int currentPosition;
 public:
 	TComp getCurrent();
 	bool valid();
 	void next();
 	void first();
+	void back(int k);
 };
 

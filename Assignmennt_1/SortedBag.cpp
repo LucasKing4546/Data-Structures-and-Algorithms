@@ -2,14 +2,20 @@
 #include <iostream>
 #include "SortedBagIterator.h"
 
+
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 SortedBag::SortedBag(Relation r) {
-	// Theta(1)
 	capacity = 1;
 	length = 0;
 	elements = new TComp[capacity];
 	relation = r;
 }
 
+// Best-case: Theta(length)
+// Worst-case: Theta(length)
+// Total: Theta(length)
 void SortedBag::add(TComp e) {
 	// If resize is needed, copying takes Theta(length)
 	if (length == capacity) {
@@ -24,11 +30,9 @@ void SortedBag::add(TComp e) {
 	}
 
 	if (length == 0) {
-		// Theta(1)
 		elements[length++] = e;
 	}
 	else {
-		// Theta(log length)
 		int left = 0, right = int(length);
 		while (left < right) {
 			int mid = (left + right) / 2;
@@ -37,36 +41,37 @@ void SortedBag::add(TComp e) {
 			else
 				right = mid;
 		}
-		// O(length)
 		for (int i = int(length); i > left; --i) {
 			elements[i] = elements[i - 1];
 		}
 		elements[left] = e;
 		length++;
 	}
-
-	//Overall complexity: Theta(length)
 }
 
-
+// Best-case: Theta(1)
+// Worst-case: Theta(length)
+// Total: O(length)
 bool SortedBag::remove(TComp e) {
-	// Theta(length)
 	for (int i = 0; i < length; i++) {
 		if (elements[i] == e) {
-			// Theta(n): Worst-case shifting of elements left after removal
 			for (int j = i; j < length - 1; j++) {
 				elements[j] = elements[j + 1];
 			}
 			length--;
 			return true;
 		}
+		if (!relation(elements[i], e)){
+			return false;
+		}
 	}
 	return false;
 }
 
-
+// Best-case: Theta(1)
+// Worst-case: Theta(log length)
+// Total: O(log length)
 bool SortedBag::search(TComp elem) const {
-	// Theta(log length)
 	int left = 0, right = int(length - 1);
 	while (left <= right) {
 		int mid = (left + right) / 2;
@@ -83,39 +88,48 @@ bool SortedBag::search(TComp elem) const {
 	return false;
 }
 
-
+// Best-case: Theta(1)
+// Worst-case: Theta(length)
+// Total: O(length)
 int SortedBag::nrOccurrences(TComp elem) const {
-	// Theta(length)
 	int count = 0;
 	for (int i = 0; i < length; i++) {
 		if (elements[i] == elem) {
 			count++;
 		}
+		if (!relation(elements[i], elem)) {
+			break;
+		}
 	}
 	return count;
+
 }
 
-
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 int SortedBag::size() const {
-	// Theta(1)
 	return int(length);
 }
 
-
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 bool SortedBag::isEmpty() const {
-	// Theta(1)
 	return (length == 0);
 }
 
-
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 SortedBagIterator SortedBag::iterator() const {
-	// Theta(1)
 	return SortedBagIterator(*this);
 }
 
-
+// Best-case: Theta(1)
+// Worst-case: Theta(1)
+// Total: Theta(1)
 SortedBag::~SortedBag() {
-	// Theta(1)
 	if (elements) {
 		delete[] elements;
 		elements = nullptr;
