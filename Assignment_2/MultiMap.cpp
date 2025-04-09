@@ -17,8 +17,8 @@ MultiMap::MultiMap() {
 
 
 void MultiMap::add(TKey c, TValue v) {
-	// Worst case: Theta(1)
-	// Average case: Theta(1)
+	// Worst case: Theta(n)
+	// Average case: O(n)
 	// Best case: Theta(1)
 	if (!keys.contains(c)) {
 		KeyNode* newNode = new KeyNode(c);
@@ -65,10 +65,11 @@ void MultiMap::add(TKey c, TValue v) {
 
 
 bool MultiMap::remove(TKey c, TValue v) {
-	// Worst case: Theta(n)
-	// Average case: O(n)
+	// n - number of nodes
+	// v - number of values
+	// Worst case: Theta(n + v)
+	// Average case: O(n + v)
 	// Best case: Theta(1)
-
 	KeyNode* currentNode = head;
 
 	while (currentNode != nullptr && currentNode->key != c) {

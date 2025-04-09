@@ -8,6 +8,9 @@
 
 
 MultiMapIterator::MultiMapIterator(const MultiMap& c): col(c) {
+	// Worst case: Theta(1)
+	// Average case: Theta(1)
+	// Best case: Theta(1)
 	current = col.head;
 	currentValue = (current != nullptr) ? current->first : nullptr;
 }
@@ -33,6 +36,9 @@ bool MultiMapIterator::valid() const {
 }
 
 void MultiMapIterator::next() {
+	// Worst case: Theta(1)
+	// Average case: Theta(1)
+	// Best case: Theta(1)
 	if (current == nullptr) {
 		throw std::out_of_range("Invalid iterator");
 	}
