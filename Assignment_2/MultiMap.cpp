@@ -88,7 +88,6 @@ bool MultiMap::remove(TKey c, TValue v) {
 			if (currentNode == head && currentNode == tail) {
 				head = nullptr;
 				tail = nullptr;
-				keys.erase(c);
 			} else if (currentNode == head) {
 				head = currentNode->next;
 				head->prev = nullptr;
@@ -100,6 +99,7 @@ bool MultiMap::remove(TKey c, TValue v) {
 				currentNode->prev->next = currentNode->next;
 				currentNode->next->prev = currentNode->prev;
 			}
+			keys.erase(c);
 			delete currentNode;
 		} else if (currentNode->first == valueNode) {
 			currentNode->first = valueNode->next;

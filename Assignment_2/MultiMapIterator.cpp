@@ -8,11 +8,8 @@
 
 
 MultiMapIterator::MultiMapIterator(const MultiMap& c): col(c) {
-	// Worst case: Theta(1)
-	// Average case: Theta(1)
-	// Best case: Theta(1)
 	current = col.head;
-	currentValue = current->first;
+	currentValue = (current != nullptr) ? current->first : nullptr;
 }
 
 TElem MultiMapIterator::getCurrent() const{
@@ -22,7 +19,6 @@ TElem MultiMapIterator::getCurrent() const{
 	if (current == nullptr) {
 		throw std::out_of_range("Invalid iterator");
 	}
-	std::cout << "Current key: " << current->key << ", Current value: " << currentValue->data << std::endl;
 	return TElem(current->key, currentValue->data);
 }
 
@@ -37,17 +33,13 @@ bool MultiMapIterator::valid() const {
 }
 
 void MultiMapIterator::next() {
-	// Worst case: Theta(1)
-	// Average case: Theta(1)
-	// Best case: Theta(1)
 	if (current == nullptr) {
 		throw std::out_of_range("Invalid iterator");
 	}
-	if (currentValue == nullptr) {
+	if (currentValue == nullptr || currentValue->next == nullptr) {
 		current = current->next;
-		currentValue = current->first;
-	}
-	else {
+		currentValue = (current != nullptr) ? current->first : nullptr;
+	} else {
 		currentValue = currentValue->next;
 	}
 }
@@ -57,5 +49,6 @@ void MultiMapIterator::first() {
 	// Average case: Theta(1)
 	// Best case: Theta(1)
 	current = col.head;
+	currentValue = (current != nullptr) ? current->first : nullptr;
 }
 

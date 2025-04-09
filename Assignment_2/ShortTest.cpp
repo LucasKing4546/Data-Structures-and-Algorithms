@@ -39,7 +39,6 @@ void testAll() {
 	assert(im.valid() == true);
 
 	while (im.valid()) {
-		std::cout << "Test iterator" << std::endl;
 		im.getCurrent();
 		im.next();
 	}
