@@ -1,0 +1,7 @@
+# ninja log v6
+2	401	7688505106096265	CMakeFiles/Assignment_4.dir/App.cpp.obj	5551bf8bccd36228
+9	127	7688506615846656	CMakeFiles/Assignment_4.dir/ShortTest.cpp.obj	29fc5d115ba3426e
+17	131	7688506615928399	CMakeFiles/Assignment_4.dir/SetIterator.cpp.obj	543670ea35763672
+12	226	7688506615884781	CMakeFiles/Assignment_4.dir/Set.cpp.obj	cee8a70d476976d7
+4	385	7688506615806639	CMakeFiles/Assignment_4.dir/ExtendedTest.cpp.obj	a1f402a72fd66c58
+385	467	7688506619612970	Assignment_4.exe	92e8fc490d707a2
