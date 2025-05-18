@@ -1,3 +1,4 @@
-C:/Git/Data-Structures-and-Algorithms/Huffman/cmake-build-debug/CMakeFiles/Huffman.dir
+C:/Git/Data-Structures-and-Algorithms/Huffman/cmake-build-debug/CMakeFiles/Huffman_encoder.dir
+C:/Git/Data-Structures-and-Algorithms/Huffman/cmake-build-debug/CMakeFiles/Huffman_decoder.dir
 C:/Git/Data-Structures-and-Algorithms/Huffman/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Git/Data-Structures-and-Algorithms/Huffman/cmake-build-debug/CMakeFiles/rebuild_cache.dir

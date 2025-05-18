@@ -41,61 +41,118 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Git/Data-Structures-and-Algorithms/Huffman/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Huffman
+# Object build statements for EXECUTABLE target Huffman_encoder
 
 
 #############################################
-# Order-only phony target for Huffman
+# Order-only phony target for Huffman_encoder
 
-build cmake_object_order_depends_target_Huffman: phony || .
+build cmake_object_order_depends_target_Huffman_encoder: phony || .
 
-build CMakeFiles/Huffman.dir/node.cpp.obj: CXX_COMPILER__Huffman_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/node.cpp || cmake_object_order_depends_target_Huffman
-  DEP_FILE = CMakeFiles\Huffman.dir\node.cpp.obj.d
+build CMakeFiles/Huffman_encoder.dir/node.cpp.obj: CXX_COMPILER__Huffman_encoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/node.cpp || cmake_object_order_depends_target_Huffman_encoder
+  DEP_FILE = CMakeFiles\Huffman_encoder.dir\node.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Huffman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Huffman.dir
+  OBJECT_DIR = CMakeFiles\Huffman_encoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_encoder.dir
 
-build CMakeFiles/Huffman.dir/code.cpp.obj: CXX_COMPILER__Huffman_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/code.cpp || cmake_object_order_depends_target_Huffman
-  DEP_FILE = CMakeFiles\Huffman.dir\code.cpp.obj.d
+build CMakeFiles/Huffman_encoder.dir/code.cpp.obj: CXX_COMPILER__Huffman_encoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/code.cpp || cmake_object_order_depends_target_Huffman_encoder
+  DEP_FILE = CMakeFiles\Huffman_encoder.dir\code.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Huffman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Huffman.dir
+  OBJECT_DIR = CMakeFiles\Huffman_encoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_encoder.dir
 
-build CMakeFiles/Huffman.dir/huffman.cpp.obj: CXX_COMPILER__Huffman_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/huffman.cpp || cmake_object_order_depends_target_Huffman
-  DEP_FILE = CMakeFiles\Huffman.dir\huffman.cpp.obj.d
+build CMakeFiles/Huffman_encoder.dir/huffman.cpp.obj: CXX_COMPILER__Huffman_encoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/huffman.cpp || cmake_object_order_depends_target_Huffman_encoder
+  DEP_FILE = CMakeFiles\Huffman_encoder.dir\huffman.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Huffman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Huffman.dir
+  OBJECT_DIR = CMakeFiles\Huffman_encoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_encoder.dir
 
-build CMakeFiles/Huffman.dir/io.cpp.obj: CXX_COMPILER__Huffman_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/io.cpp || cmake_object_order_depends_target_Huffman
-  DEP_FILE = CMakeFiles\Huffman.dir\io.cpp.obj.d
+build CMakeFiles/Huffman_encoder.dir/io.cpp.obj: CXX_COMPILER__Huffman_encoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/io.cpp || cmake_object_order_depends_target_Huffman_encoder
+  DEP_FILE = CMakeFiles\Huffman_encoder.dir\io.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Huffman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Huffman.dir
+  OBJECT_DIR = CMakeFiles\Huffman_encoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_encoder.dir
 
-build CMakeFiles/Huffman.dir/encoder.cpp.obj: CXX_COMPILER__Huffman_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/encoder.cpp || cmake_object_order_depends_target_Huffman
-  DEP_FILE = CMakeFiles\Huffman.dir\encoder.cpp.obj.d
+build CMakeFiles/Huffman_encoder.dir/encoder.cpp.obj: CXX_COMPILER__Huffman_encoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/encoder.cpp || cmake_object_order_depends_target_Huffman_encoder
+  DEP_FILE = CMakeFiles\Huffman_encoder.dir\encoder.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Huffman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Huffman.dir
+  OBJECT_DIR = CMakeFiles\Huffman_encoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_encoder.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Huffman
+# Link build statements for EXECUTABLE target Huffman_encoder
 
 
 #############################################
-# Link the executable Huffman.exe
+# Link the executable Huffman_encoder.exe
 
-build Huffman.exe: CXX_EXECUTABLE_LINKER__Huffman_Debug CMakeFiles/Huffman.dir/node.cpp.obj CMakeFiles/Huffman.dir/code.cpp.obj CMakeFiles/Huffman.dir/huffman.cpp.obj CMakeFiles/Huffman.dir/io.cpp.obj CMakeFiles/Huffman.dir/encoder.cpp.obj
+build Huffman_encoder.exe: CXX_EXECUTABLE_LINKER__Huffman_encoder_Debug CMakeFiles/Huffman_encoder.dir/node.cpp.obj CMakeFiles/Huffman_encoder.dir/code.cpp.obj CMakeFiles/Huffman_encoder.dir/huffman.cpp.obj CMakeFiles/Huffman_encoder.dir/io.cpp.obj CMakeFiles/Huffman_encoder.dir/encoder.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Huffman.dir
+  OBJECT_DIR = CMakeFiles\Huffman_encoder.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Huffman.exe
-  TARGET_IMPLIB = libHuffman.dll.a
-  TARGET_PDB = Huffman.exe.dbg
+  TARGET_FILE = Huffman_encoder.exe
+  TARGET_IMPLIB = libHuffman_encoder.dll.a
+  TARGET_PDB = Huffman_encoder.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Huffman_decoder
+
+
+#############################################
+# Order-only phony target for Huffman_decoder
+
+build cmake_object_order_depends_target_Huffman_decoder: phony || .
+
+build CMakeFiles/Huffman_decoder.dir/node.cpp.obj: CXX_COMPILER__Huffman_decoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/node.cpp || cmake_object_order_depends_target_Huffman_decoder
+  DEP_FILE = CMakeFiles\Huffman_decoder.dir\node.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Huffman_decoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_decoder.dir
+
+build CMakeFiles/Huffman_decoder.dir/code.cpp.obj: CXX_COMPILER__Huffman_decoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/code.cpp || cmake_object_order_depends_target_Huffman_decoder
+  DEP_FILE = CMakeFiles\Huffman_decoder.dir\code.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Huffman_decoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_decoder.dir
+
+build CMakeFiles/Huffman_decoder.dir/huffman.cpp.obj: CXX_COMPILER__Huffman_decoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/huffman.cpp || cmake_object_order_depends_target_Huffman_decoder
+  DEP_FILE = CMakeFiles\Huffman_decoder.dir\huffman.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Huffman_decoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_decoder.dir
+
+build CMakeFiles/Huffman_decoder.dir/io.cpp.obj: CXX_COMPILER__Huffman_decoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/io.cpp || cmake_object_order_depends_target_Huffman_decoder
+  DEP_FILE = CMakeFiles\Huffman_decoder.dir\io.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Huffman_decoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_decoder.dir
+
+build CMakeFiles/Huffman_decoder.dir/decoder.cpp.obj: CXX_COMPILER__Huffman_decoder_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Huffman/decoder.cpp || cmake_object_order_depends_target_Huffman_decoder
+  DEP_FILE = CMakeFiles\Huffman_decoder.dir\decoder.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Huffman_decoder.dir
+  OBJECT_FILE_DIR = CMakeFiles\Huffman_decoder.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Huffman_decoder
+
+
+#############################################
+# Link the executable Huffman_decoder.exe
+
+build Huffman_decoder.exe: CXX_EXECUTABLE_LINKER__Huffman_decoder_Debug CMakeFiles/Huffman_decoder.dir/node.cpp.obj CMakeFiles/Huffman_decoder.dir/code.cpp.obj CMakeFiles/Huffman_decoder.dir/huffman.cpp.obj CMakeFiles/Huffman_decoder.dir/io.cpp.obj CMakeFiles/Huffman_decoder.dir/decoder.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Huffman_decoder.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Huffman_decoder.exe
+  TARGET_IMPLIB = libHuffman_decoder.dll.a
+  TARGET_PDB = Huffman_decoder.exe.dbg
 
 
 #############################################
@@ -123,7 +180,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Huffman: phony Huffman.exe
+build Huffman_decoder: phony Huffman_decoder.exe
+
+build Huffman_encoder: phony Huffman_encoder.exe
 
 # =============================================================================
 # Folder targets.
@@ -133,7 +192,7 @@ build Huffman: phony Huffman.exe
 #############################################
 # Folder: C:/Git/Data-Structures-and-Algorithms/Huffman/cmake-build-debug
 
-build all: phony Huffman.exe
+build all: phony Huffman_encoder.exe Huffman_decoder.exe
 
 # =============================================================================
 # Built-in targets
