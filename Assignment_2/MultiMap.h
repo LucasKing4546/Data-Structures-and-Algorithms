@@ -43,7 +43,6 @@ private:
 	KeyNode* head;
 	KeyNode* tail;
 	int count;
-	set<TKey> keys;
 
 public:
 	//constructor
@@ -73,6 +72,8 @@ public:
 
 	//descturctor
 	~MultiMap();
+
+	bool find(TKey c) const;
 };
 
 

@@ -15,12 +15,27 @@ MultiMap::MultiMap() {
 	count = 0;
 }
 
+// Worst case: Theta(n)
+// Average case: O(n)
+// Best case: Theta(1)
+bool MultiMap::find(TKey c) const {
+	KeyNode* currentNode = head;
+	while (currentNode != nullptr && currentNode->key != c) {
+		currentNode = currentNode->next;
+	}
+	if (currentNode == nullptr) {
+		return false;
+	}
+	return true;
+}
+
+
 
 void MultiMap::add(TKey c, TValue v) {
 	// Worst case: Theta(n)
 	// Average case: O(n)
 	// Best case: Theta(1)
-	if (!keys.contains(c)) {
+	if (!find(c)) {
 		KeyNode* newNode = new KeyNode(c);
 		ValueNode* newValueNode = new ValueNode(v);
 
@@ -38,7 +53,6 @@ void MultiMap::add(TKey c, TValue v) {
 			tail = newNode;
 		}
 		count++;
-		keys.insert(c);
 	}
 	else {
 		KeyNode* currentNode = head;
@@ -100,7 +114,6 @@ bool MultiMap::remove(TKey c, TValue v) {
 				currentNode->prev->next = currentNode->next;
 				currentNode->next->prev = currentNode->prev;
 			}
-			keys.erase(c);
 			delete currentNode;
 		} else if (currentNode->first == valueNode) {
 			currentNode->first = valueNode->next;
