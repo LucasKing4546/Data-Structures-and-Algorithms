@@ -3,10 +3,18 @@
 #include "MultiMapIterator.h"
 #include <assert.h>
 #include <vector>
-#include<iostream>
+#include <iostream>
+
+bool cond(TValue value) {
+	if (value % 3 == 0) {
+		return true;
+	}
+	return false;
+}
 
 void testAll() {
 	MultiMap m;
+
 	m.add(1, 100);
 	m.add(2, 200);
 	m.add(3, 300);
@@ -39,4 +47,7 @@ void testAll() {
 	assert(im.valid() == false);
 	im.first();
 	assert(im.valid() == true);
+
+	m.filter(cond);
+	assert(m.size()==2);
 }
