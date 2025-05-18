@@ -1,5 +1,8 @@
 #include "ShortTest.h"
 #include <assert.h>
+#include <iostream>
+#include <ostream>
+
 #include "Set.h"
 #include "SetIterator.h"
 
@@ -21,7 +24,6 @@ void testAll() {
 	assert(s.remove(6) == false);
 	assert(s.size() == 4);
 
-
 	SetIterator it = s.iterator();
 	it.first();
 	int sum = 0;
@@ -32,5 +34,14 @@ void testAll() {
 	}
 	assert(sum == 19);
 
+	// Custom tests
+	s.add(21);
+
+	it.first();
+	it.next();
+	it.next();
+	assert(it.getCurrent() == 5);
+	it.previous();
+	assert(it.getCurrent() == 21);
 }
 

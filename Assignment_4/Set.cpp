@@ -7,6 +7,9 @@ const int INITIAL_CAPACITY = 16;
 // Load factor threshold
 const float LOAD_FACTOR_THRESHOLD = 0.7f;
 
+// Worst case: Theta(cap)
+// Average case: Theta(cap)
+// Best case: Theta(cap)
 Set::Set() {
     // Initialize an empty hash table
     this->capacity = INITIAL_CAPACITY;
@@ -18,10 +21,16 @@ Set::Set() {
     this->loadFactor = LOAD_FACTOR_THRESHOLD;
 }
 
+// Worst case: Theta(1)
+// Average case: Theta(1)
+// Best case: Theta(1)
 int Set::hash(TElem elem) const {
     return abs(elem) % this->capacity;
 }
 
+// Worst case: Theta(cap + n)
+// Average case: O(cap + n)
+// Best case: Theta(cap)
 void Set::rehash() {
     int oldCapacity = this->capacity;
     Node** oldTable = this->table;
@@ -47,6 +56,9 @@ void Set::rehash() {
     delete[] oldTable;
 }
 
+// Worst case: Theta(n)
+// Average case: O(n)
+// Best case: Theta(1)
 bool Set::add(TElem elem) {
     if (search(elem)) {
         return false;
@@ -72,6 +84,9 @@ bool Set::add(TElem elem) {
     return true;
 }
 
+// Worst case: Theta(n)
+// Average case: O(n)
+// Best case: Theta(1)
 bool Set::remove(TElem elem) {
     // Compute hash value
     int pos = hash(elem);
@@ -97,7 +112,6 @@ bool Set::remove(TElem elem) {
             return true;
         }
 
-        // Move to next node
         prev = current;
         current = current->next;
     }
@@ -106,11 +120,13 @@ bool Set::remove(TElem elem) {
     return false;
 }
 
+// Worst case: Theta(n)
+// Average case: O(n)
+// Best case: Theta(1)
 bool Set::search(TElem elem) const {
     // Compute hash value
     int pos = hash(elem);
 
-    // Search in the list
     Node* current = this->table[pos];
 
     while (current != nullptr) {
@@ -118,7 +134,6 @@ bool Set::search(TElem elem) const {
             // Element found
             return true;
         }
-        // Move to next node
         current = current->next;
     }
 
@@ -126,14 +141,23 @@ bool Set::search(TElem elem) const {
     return false;
 }
 
+// Worst case: Theta(1)
+// Average case: Theta(1)
+// Best case: Theta(1)
 int Set::size() const {
     return this->numElements;
 }
 
+// Worst case: Theta(1)
+// Average case: Theta(1)
+// Best case: Theta(1)
 bool Set::isEmpty() const {
     return this->numElements == 0;
 }
 
+// Worst case: Theta(cap + n)
+// Average case: O(cap + n)
+// Best case: Theta(cap)
 Set::~Set() {
     // Deallocate all nodes
     for (int i = 0; i < this->capacity; i++) {
@@ -149,6 +173,9 @@ Set::~Set() {
     delete[] this->table;
 }
 
+// Worst case: Theta(1)
+// Average case: Theta(1)
+// Best case: Theta(1)
 SetIterator Set::iterator() const {
     return SetIterator(*this);
 }

@@ -6,6 +6,8 @@
 typedef int TElem;
 class SetIterator;
 
+
+
 class Set {
 	//DO NOT CHANGE THIS PART
 	friend class SetIterator;
@@ -30,7 +32,7 @@ public:
 	Set();
 
 	//adds an element to the set
-	//returns true if the element was added, false otherwise (if the element was already in the set and it was not added)
+	//returns true if the element was added, false otherwise (if the element was already in the set, and it was not added)
 	bool add(TElem e);
 
 	//removes an element from the set
