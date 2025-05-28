@@ -3,11 +3,17 @@
 //DO NOT CHANGE THIS PART
 typedef int TElem;
 #define NULL_TELEM 0
-
+struct Node {
+	int row, col;
+	TElem value;
+	Node* left, *right;
+	Node() : row(0), col(0), value(NULL_TELEM), left(nullptr), right(nullptr) {}
+	Node(int r, int c, TElem v) : row(r), col(c), value(v), left(nullptr), right(nullptr) {}
+};
 class Matrix {
-
 private:
-	//TODO - Representation
+  	int lines, columns;
+    Node* root;
 public:
 	//constructor
 	Matrix(int nrLines, int nrCols);
@@ -27,4 +33,8 @@ public:
 	//throws exception if (i,j) is not a valid position in the Matrix
 	TElem modify(int i, int j, TElem e);
 
+    // helper function
+	Node* search(Node* current, int i, int j) const;
+	bool insert(Node*& current, int i, int j, TElem e);
 };
+
