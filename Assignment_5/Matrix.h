@@ -36,5 +36,7 @@ public:
     // helper function
 	Node* search(Node* current, int i, int j) const;
 	bool insert(Node*& current, int i, int j, TElem e);
+	bool remove(Node*& current, int i, int j);
+	Node* findMin(Node* current) const;
 };
 

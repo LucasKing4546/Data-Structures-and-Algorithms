@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Assignment_5 App.cpp ExtendedTest.cpp
                ExtendedTest.h ShortTest.cpp ShortTest.h
-                Matrix.cpp Matrix.h)
+                Matrix.cpp Matrix.h MatrixIterator.h MatrixIterator.cpp)

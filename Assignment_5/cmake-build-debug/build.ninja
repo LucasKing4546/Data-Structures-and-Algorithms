@@ -73,6 +73,12 @@ build CMakeFiles/Assignment_5.dir/Matrix.cpp.obj: CXX_COMPILER__Assignment_5_uns
   OBJECT_DIR = CMakeFiles\Assignment_5.dir
   OBJECT_FILE_DIR = CMakeFiles\Assignment_5.dir
 
+build CMakeFiles/Assignment_5.dir/MatrixIterator.cpp.obj: CXX_COMPILER__Assignment_5_unscanned_Debug C$:/Git/Data-Structures-and-Algorithms/Assignment_5/MatrixIterator.cpp || cmake_object_order_depends_target_Assignment_5
+  DEP_FILE = CMakeFiles\Assignment_5.dir\MatrixIterator.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Assignment_5.dir
+  OBJECT_FILE_DIR = CMakeFiles\Assignment_5.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Assignment_5
@@ -81,7 +87,7 @@ build CMakeFiles/Assignment_5.dir/Matrix.cpp.obj: CXX_COMPILER__Assignment_5_uns
 #############################################
 # Link the executable Assignment_5.exe
 
-build Assignment_5.exe: CXX_EXECUTABLE_LINKER__Assignment_5_Debug CMakeFiles/Assignment_5.dir/App.cpp.obj CMakeFiles/Assignment_5.dir/ExtendedTest.cpp.obj CMakeFiles/Assignment_5.dir/ShortTest.cpp.obj CMakeFiles/Assignment_5.dir/Matrix.cpp.obj
+build Assignment_5.exe: CXX_EXECUTABLE_LINKER__Assignment_5_Debug CMakeFiles/Assignment_5.dir/App.cpp.obj CMakeFiles/Assignment_5.dir/ExtendedTest.cpp.obj CMakeFiles/Assignment_5.dir/ShortTest.cpp.obj CMakeFiles/Assignment_5.dir/Matrix.cpp.obj CMakeFiles/Assignment_5.dir/MatrixIterator.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Assignment_5.dir
